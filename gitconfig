@@ -1,0 +1,25 @@
+[rebase]
+	instructionFormat = (%an <%ae>) %s
+[alias]
+	st = status
+	co = checkout
+	ca = commit -a
+	rb = rebase --i
+	oops = commit -a --amend
+	wip = commit -a -m 'WIP'
+	st = status
+	l = log  --decorate=short --pretty=format:'%C(green)%d%C(red) %aN%Creset%n' --graph --all;
+	ll = log  --decorate=short --pretty=format:'%C(blue)%h%C(green)%d%C(red) %aN%Creset (%cr)%n        %s%n ' --graph --all;
+	k = log --graph --decorate --pretty=oneline --abbrev-commit;
+	deps = submodule foreach 'git pull';
+
+[diff]
+        color = auto
+
+[pager]
+        color = true
+
+[status]
+        color = auto
+[push]
+	default = tracking

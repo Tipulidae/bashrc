@@ -1,0 +1,5 @@
+[user]
+	name = Axel
+	email = axel@lytics.ai
+[include]
+	path = ./PycharmProjects/bashrc/gitconfig
