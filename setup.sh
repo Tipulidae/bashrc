@@ -3,19 +3,16 @@
 BASHRC=$HOME/.bashrc
 VIMRC=$HOME/.vim
 
-# if [[ -e $BASHRC ]]; then
-# 	echo "${BASHRC} exists, skipping"
-# else
-# 	echo "linking ${BASHRC}"
-# 	ln -s `readlink -f bashrc` $BASHRC
-# fi
+CWD="$(pwd)"
 
-if [[ -e $VIMRC ]]; then
-	echo "${VIMRC} exists, skipping"
-	# Want to check if ~/.vimrc exists, and if so, copy it to vim/vimrc.default
-	# or something. Then make sure that vimrc.default is in .gitignore, and also 
-	# that vimrc.default is sourced in vimrc. 
-else
-	echo "linking ${VIMRC}"
-	ln -s -r vim $VIMRC 
+# This code links to the settings in bashrc
+link="
+# Add customizations from repository
+if [ -f ${CWD}/bashrc ]; then
+    . ${CWD}/bashrc
 fi
+"
+
+# Append link to ~/.bashrc
+echo "${link}" >> ${BASHRC}
+
