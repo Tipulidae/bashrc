@@ -23,3 +23,6 @@
         color = auto
 [push]
 	default = tracking
+[core]
+  editor = vim
+
