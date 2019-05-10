@@ -1,0 +1,41 @@
+bash:
+* if there is no .bashrc, create one and add $BASHLINE to it
+* if .bashrc exists, search for $BASHLINE. if it exists, do nothing. otherwise, add $BASHLINE to it.
+* $BASHLINE = ??? (. /path/to/bashrc)
+
+gitconfig
+if "git config --get-all include.path | grep $GITPATH" returns nothing:
+git config --global --add include.path $GITPATH
+
+
+vimrc:
+
+
+tmux:
+
+
+zsh:
+
+
+(screen)
+
+
+
+Stuff to install on a new machine:
+* conda
+* zsh
+* tmux
+* powerline fonts: https://github.com/powerline/fonts
+* powerlevel9k (zsh plugin) https://github.com/bhilburn/powerlevel9k
+* awesome-terminal-fonts https://github.com/gabrielelana/awesome-terminal-fonts
+
+Look into:
+* nicer looking 
+* powerlevel10k: https://github.com/romkatv/powerlevel10k
+
+
+
+
+
+
+
